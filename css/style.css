@@ -1,0 +1,111 @@
+/* a css comment*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background: #f7f3e8;
+    color: #262626;
+    line-height: 1.5;
+    font-family: 'source sans 3',sans-serif;
+}
+h1,h2{
+    font-family: 'source serif 4',serif;
+    font-weight: 600;
+}
+header{
+    background: #1f6f31;
+    color: #f7f3e8;
+}
+nav{
+    backgroud: #0e0202;
+}
+nav a{
+    color: #f4f2f2;
+}
+a{
+    color: #1f6f3e;
+}
+header,main,aside,footer{
+    padding: 1rem;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+    list-style: none;
+    margin: 0;
+/* what is the value for padding-right, padding-left,padding-top, padding-bottom give the following rule*/
+    padding: 0.75rem 1rem;
+}
+.logo{
+    width: 3.5rem;
+    height: auto;
+}
+h1{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+}
+.route-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+.route-cards li{
+    flex: 1 1 12rem;
+    padding: 1rem;
+    background: #ffffff;
+border-top: 4px solid #d8a22b;
+}
+body{
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 18rem;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+
+}
+header{grid-area: header}
+nav{grid-area: nav}
+main{grid-area: main}
+aside{grid-area: aside}
+footer{grid-area: footer}
+footer{
+    border-top:3px solid #d8a22b;
+}
+
+@media(max-width: 600px){
+    body{
+        grid-template-columns: minmax(0,1fr);
+        grid-template-areas;
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer"
+    }
+    nav{
+        position: static;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    .logo{
+        width: 2.5rem;
+    }
+}
